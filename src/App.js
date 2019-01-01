@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './pic.jpg';
 import './App.css';
+import { Button } from 'react-bootstrap';
 
 class App extends Component {
   render() {
@@ -13,7 +14,11 @@ class App extends Component {
           </p>
           <p>
             Hey Lucas, here is our app :)
+
           </p>
+          <Button bsStyle="red">Danger</Button>
+          <Button bsSize="large">Large button</Button>
+          <Button bsStyle="link">https://amazon.com</Button>
         </header>
       </div>
     );
