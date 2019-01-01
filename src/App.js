@@ -16,6 +16,10 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
+import HomePage from './pages/HomePage';
+import DeliveryPage from './pages/DeliveryPage';
+
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
 class App extends Component {
 
   constructor(props) {
@@ -34,7 +38,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      
+      <Router>
+        <div>
+          
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">Jacob and Lucas's App</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -52,10 +59,10 @@ class App extends Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    <Link to="/">Home Page</Link>
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
+                    <Link to="/delivery">Delivery Page</Link>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
@@ -66,20 +73,14 @@ class App extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <p>
-            Hey Lucas, here is our app :)
 
-          </p>
-          <Button bsStyle="red">Danger</Button>
-          <Button bsSize="large">Large button</Button>
-          <Button bsStyle="link">https://amazon.com</Button>
-        </header>
-      </div>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/delivery" component={DeliveryPage} />
+          </Switch>
+          
+        </div>
+      </Router>
     );
   }
 }
