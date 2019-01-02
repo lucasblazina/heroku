@@ -18,6 +18,8 @@ import {
 
 import HomePage from './pages/HomePage';
 import DeliveryPage from './pages/DeliveryPage';
+import LawnmowerPage from './pages/LawnmowerPage';
+
 
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
 class App extends Component {
@@ -59,14 +61,16 @@ class App extends Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <Link to="/">Home Page</Link>
+                    <Button color="primary" href="/">Home Page</Button>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link to="/delivery">Delivery Page</Link>
+                    <Button color="primary" href="/delivery">Delivery Page</Button>
                   </DropdownItem>
+
                   <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    <Button color="primary" href="lawnmower">Lawnmower Division</Button>
+
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -77,6 +81,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/delivery" component={DeliveryPage} />
+            <Route exact path="/lawnmower" component={LawnmowerPage} />
           </Switch>
           
         </div>
