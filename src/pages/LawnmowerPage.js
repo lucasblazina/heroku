@@ -38,10 +38,15 @@ class LawnmowerPage extends Component {
         
         <header className="App-header">
           
-          <h2>Link Page :)</h2>
-          <Button href="www.amazon.com">amazon</Button>
-          <Button bsSize="large">Large button</Button>
-          <Button bsStyle="link">https://amazon.com</Button>
+          <h2>Lawnmower Division </h2>
+          <Button color="warning" href="https://www.husqvarna.com">Husqvarna</Button>
+          <Button href="https://www.briggsandstratton.com">Briggs and Stratton</Button>
+          <Button color="danger" href="https://engines.honda.com/">Honda Small Engine's</Button>
+          <Button color="danger" href="https://www.troybilt.com">Troy Bilt</Button>
+          <Button color="success" href="https://www.deere.com">John Deere</Button>
+          <Button color="warning" href="https://www.ariens.com">Ariens</Button>
+          <Button color="primary" href="https://www.sears.com">Sears</Button>
+        
         </header>
       </div>
     );
